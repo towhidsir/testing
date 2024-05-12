@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        .box{
+          width: 100px;
+          height: 100px;
+          background-color: rgb(217, 212, 212);
+        }
+        .active{
+          border: 3px solid rgb(96, 96, 96);
+          box-shadow: 0 0 3px 3px rgba(0,0,0,.3);
+        }
+     </style>
+</head>
+<body>
+    <button id="btn">Toggle Button</button>
+    <div class="box"></div>
+    <script>
+        $(function(){
+
+           $("#btn").on("click",function(){  
+
+              if($(".box").hasClass("active")){
+                   $(".box").removeClass("active");
+              }else{
+                   $(".box").addClass("active");
+              }
+
+           });
+
+            
+        });        
+    </script>
+</body>
+</html>

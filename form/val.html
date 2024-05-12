@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        Name<br>
+        <input type="text" id="name" />
+   </div>
+   <div>
+    City<br>
+    <select id="city">
+       <option value="dhaka">Dhaka</option>
+       <option value="khulna">Khulna</option>
+       <option value="barishal">Barishal</option>
+    </select>
+   </div>
+   <div>
+    Address<br>
+    <textarea id="address"></textarea>
+   </div>
+   <div>
+    <button id="btn">Save</button>
+   </div>
+    
+
+    <script>
+        $(function(){
+
+            $("#btn").on("click",function(){
+
+                let name=$("#name").val();
+                let city=$("#city").val();
+                let address=$("#address").val();
+
+                alert(name+"\n"+city+"\n"+address);
+
+            });
+
+            
+        });        
+    </script>
+</body>
+</html>
